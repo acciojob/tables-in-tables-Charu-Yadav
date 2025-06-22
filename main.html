@@ -6,15 +6,33 @@
     <title>Table</title>
     <link rel="stylesheet" href="style.css" />
 	  <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      padding: 8px;
-    }
-    .black-cell {
-      background-color: black;
-      color: white;
-    }
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .nested-table-header {
+    background-color: lightgray;
+    font-weight: bold;
+    text-align: center;
+  }
+  .html-cell {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+  }
   </style>
   </head>
   <body>
@@ -25,7 +43,7 @@
 		<td>
 		<table>
 		<tr>
-		<th>Nested Table 1</th>
+		<th class="nested-table-header">Nested Table 1</th>
         </tr>
 		<tr>
 		<td>
@@ -39,7 +57,7 @@
 		</table>
 		<table>
 		<tr>
-		<th colspan=2>Nested Table 2</th>
+		<th class="nested-table-header" colspan=2>Nested Table 2</th>
 		</tr>
 		<tr>
 		<th>Column 1</th>
@@ -52,16 +70,16 @@
 	   </table>
 			<table>
 				<tr>
-					<th>Nested Table 3</th>
+					<th colspan=2 class="nested-table-header" >Nested Table 3</th>
 				</tr>
 				<tr>
-					<td><a href="">Nested Table</a></td>
+					<td><a href="#">Nested Table</a></td>
 					<td>Demo Continued</td>
 				</tr>
 			</table>
 			<table>
 				<tr>
-					<th>Nested Table 4</th>
+					<th class="nested-table-header">Nested Table 4</th>
 				</tr>
 				<tr>
 					<td class="black-cell">HTML</td>
